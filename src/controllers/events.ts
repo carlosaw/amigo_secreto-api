@@ -31,3 +31,35 @@ export const addEvent: RequestHandler = async (req, res) => {
 
   res.json({ error: 'Ocorreu um erro!' });
 }
+
+export const updateEvent: RequestHandler = async (req, res) => {
+  const { id } = req.params;// Pega o envento
+  const updateEventSchema = z.object({// Pega o que foi digitado
+    status: z.boolean().optional(),// Pode trocar só status
+    title: z.string().optional(),// Pode trocar só titulo
+    description: z.string().optional(),// Pode trocar só description
+    grouped: z.boolean().optional()// Pode trocar só grupo
+  });
+  const body = updateEventSchema.safeParse(req.body);
+  if (!body.success) return res.json({ error: 'Dados inválidos! ' });
+
+  const updatedEvent = await events.update(parseInt(id), body.data);
+  if (updatedEvent) {
+    if (updatedEvent.status) {
+      // TODO: Fazer o sorteio
+    } else {
+      // TODO: Limpar o sorteio
+    }
+    return res.json({ event: updatedEvent });
+  }
+  res.json({ error: 'Ocorreu um erro!' });
+}
+
+export const deleteEvent: RequestHandler = async (req, res) => {
+  const { id } = req.params;
+
+  const deletedEvent = await events.remove(parseInt(id));
+  if (deletedEvent) return res.json({ event: deletedEvent });
+
+  res.json({ error: 'Ocorreu um erro!' });
+}
