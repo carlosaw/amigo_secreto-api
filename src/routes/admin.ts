@@ -2,6 +2,7 @@ import { Router } from "express";
 import * as auth from '../controllers/auth';
 import * as events from '../controllers/events';
 import * as groups from '../controllers/groups';
+import * as peoples from '../controllers/peoples';
 
 const router = Router();
 
@@ -18,5 +19,8 @@ router.get('/events/:id_event/groups', auth.validate, groups.getAll);
 router.get('/events/:id_event/groups/:id', auth.validate, groups.getGroup);
 router.post('/events/:id_event/groups', auth.validate, groups.addGroup);
 router.put('/events/:id_event/groups/:id', auth.validate, groups.updateGroup);
+router.delete('/events/:id_event/groups/:id', auth.validate, groups.deleteGroup);
+
+router.get('/events/:id_event/groups/:id_group/peoples', auth.validate, peoples.getAll);
 
 export default router;
