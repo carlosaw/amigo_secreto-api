@@ -3,4 +3,8 @@
 ## Install
 # npm install
 
-##
+## DB Dbeaver
+# as
+
+## DB Postman
+# API - Amigo Secreto
