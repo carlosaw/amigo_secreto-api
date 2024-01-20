@@ -35,6 +35,18 @@ export const remove = async (id: number) => {
 }
 
 export const doMatches = async (id: number): Promise<boolean> => {
-  
+  /* 
+  - Grupo A (id: 1)
+  -- Bonieky
+  -- Márcio
+  -- Pedro
+
+  - Grupo B (id: 2)
+  -- João
+  --Inácio
+
+  - Grupo C (id: 5)
+  -- Gabriela
+  */
   return true; // TEMPORÁRIO
 }
