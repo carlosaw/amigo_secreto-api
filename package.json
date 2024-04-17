@@ -2,11 +2,11 @@
   "name": "amigo-secreto",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
-    "start": "node build/server.js",
+    "start": "node build/server.ts",
     "migrate:dev": "prisma migrate dev",
     "migrate:deploy": "prisma migrate deploy"
   },
