@@ -1,7 +1,10 @@
-# API amigo secreto em NodeJS
+## API amigo secreto em NodeJS
 
-## Install
-# npm install
+### Install
+`npm install`
+
+### Run project
+`npm run dev`
 
 ## DB Dbeaver
 # as
