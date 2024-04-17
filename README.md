@@ -1,7 +1,10 @@
-# API amigo secreto em NodeJS
+## API amigo secreto em NodeJS
 
-## Install
-# npm install
+### Install
+`npm install`
+
+### Run project
+`npm run dev`
 
 ## DB Dbeaver
 # as
@@ -11,3 +14,6 @@
 
 ## Repositório git
 https://github.com/carlosaw/amigo_secreto-api
+
+## Page Vercel
+https://amigosecreto-frontend.vercel.app/
